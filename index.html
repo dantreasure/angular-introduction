@@ -17,12 +17,12 @@
 
 		<h2>Characters</h2>
 
-		<div class="panel panel-primary" ng-repeat="friend in friends">
+		<div class="panel panel-primary" ng-repeat="character in characters">
 		  <div class="panel-heading" style="font-weight: bold">
-		  	{{friend.name}}
-		  	<i class="fa fa-lg fa-trash" style="float: right; cursor: pointer" ng-click="delete(friend.id)"></i>
+		  	{{character.name}}
+		  	<i class="fa fa-lg fa-trash" style="float: right; cursor: pointer" ng-click="delete(character.id)"></i>
 		  </div>
-		  <div class="panel-body" ng-bind="friend.bio">
+		  <div class="panel-body" ng-bind="character.bio">
 		  </div>
 		</div>
 	</div>
