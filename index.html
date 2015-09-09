@@ -1,0 +1,31 @@
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+</head>
+<body ng-controller="main-ctrl">
+	<div class="container">
+
+		<div class="jumbotron">
+			<h1>Welcome!</h1>
+			<p>This is a place to explore the inner workings of a basic angular application.
+			</p>
+		</div>
+
+		<h2>Characters</h2>
+
+		<div class="panel panel-primary" ng-repeat="friend in friends">
+		  <div class="panel-heading" style="font-weight: bold">
+		  	{{friend.name}}
+		  	<i class="fa fa-lg fa-trash" style="float: right; cursor: pointer" ng-click="delete(friend.id)"></i>
+		  </div>
+		  <div class="panel-body" ng-bind="friend.bio">
+		  </div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
